@@ -16,6 +16,9 @@ from machine import Timer
 from config import sig_move, sig_min, sig_max, sig_dz, sigLevels
 from math import sin, sqrt, radians
 
+# Calculating matrix for led pattern at startup
+# 2 different calculations implemented, setup in ledPort.py
+# 3 params: min pwm, max pwm, pwm range (basically difference between min and max), boolean to change calculation type
 def calcBreath(PwmMin, PwmMax, PwmRange, bSqrt=False):
     
     print("calc breathing values")
@@ -37,7 +40,9 @@ def calcBreath(PwmMin, PwmMax, PwmRange, bSqrt=False):
     
     return lstBreath
             
-            
+# generating signal levels for input
+# may be changed to fixed values to configure individually
+# launched at startup in main.py
 def genSigLevels():
     
     print("calc siglevels")
