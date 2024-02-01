@@ -1,6 +1,20 @@
+'''
+############################################
+rc_ledcontroller V0.1
+
+File:    ledFu.py
+Created: 2024-01-20 I.O.
+
+Info:
+PWM patterns for output
+
+Status: Beta
+############################################
+'''
 from utils import checkTimeout
 
-
+# All functions do have the same parameters, but not all of them needed in each one
+# patterns could easily be swapped in main.py to differenz siglevens
 
 def fun_1(led, start=0, timeout=50000, speed=5, sigRange=None, signal_is=0):
     led.lightOff()
