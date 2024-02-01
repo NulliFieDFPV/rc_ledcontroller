@@ -2,6 +2,9 @@
 
 Control PWM LEDs with hobby rc receiver
 
+## Firmware
+- MicroPython based on Python 3.9
+  
 ## Hardware needed:
 - flight controller or pwm rx and programmable transmitter
 - ESP32 with at least 2 PWM outputs and an analog input
